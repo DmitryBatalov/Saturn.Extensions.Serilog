@@ -2,10 +2,12 @@ source https://www.nuget.org/api/v2
 source https://api.nuget.org/v3/index.json
 storage: none
 nuget FSharp.Core 6.0
-nuget Giraffe.SerilogExtensions
-nuget Saturn
-nuget Serilog.AspNetCore
+nuget Giraffe.SerilogExtensions ~> 1
+nuget Saturn ~> 0.14.1
+nuget Giraffe ~> 4
+nuget Serilog.AspNetCore ~> 5
 nuget Serilog.Enrichers.Thread
+nuget Microsoft.AspNetCore.Authentication.JwtBearer ~> 3
 
 group Test
   source https://www.nuget.org/api/v2
