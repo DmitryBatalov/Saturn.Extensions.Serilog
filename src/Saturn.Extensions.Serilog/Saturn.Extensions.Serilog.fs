@@ -14,7 +14,7 @@ module Serilog =
         [<CustomOperation("use_serilog_config")>]
         member this.UseSerilogConfig(state, create: unit -> ILogger) =
             let service (s: IServiceCollection) =
-                let logger = create()
+                let logger = create ()
                 Log.Logger <- logger
                 s.AddSingleton<ILogger>(logger)
 
@@ -28,7 +28,7 @@ module Serilog =
         /// Replace default logging with Serilog. Sets the config
         [<CustomOperation("use_serilog")>]
         member this.UseSerilog(state) =
-            let config (): ILogger =
+            let config () : ILogger =
                 LoggerConfiguration()
                     .Destructure.FSharpTypes()
                     .MinimumLevel.Debug()
@@ -37,7 +37,19 @@ module Serilog =
                     .Enrich.WithThreadName()
                     .Enrich.WithThreadId()
                     .WriteTo.Console(Events.LogEventLevel.Information)
-                    .WriteTo.File("./logs/info.log", rollingInterval = RollingInterval.Day, restrictedToMinimumLevel = Events.LogEventLevel.Information)
-                    .WriteTo.File("./logs/errors.log", rollingInterval = RollingInterval.Day, restrictedToMinimumLevel = Events.LogEventLevel.Error)
-                    .CreateLogger() :> _
+                    .WriteTo
+                    .File(
+                        "./logs/info.log",
+                        rollingInterval = RollingInterval.Day,
+                        restrictedToMinimumLevel = Events.LogEventLevel.Information
+                    )
+                    .WriteTo
+                    .File(
+                        "./logs/errors.log",
+                        rollingInterval = RollingInterval.Day,
+                        restrictedToMinimumLevel = Events.LogEventLevel.Error
+                    )
+                    .CreateLogger()
+                :> _
+
             this.UseSerilogConfig(state, config)
