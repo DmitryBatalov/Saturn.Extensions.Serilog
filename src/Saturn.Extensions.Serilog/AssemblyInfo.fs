@@ -4,20 +4,20 @@ open System.Reflection
 
 [<assembly: AssemblyTitleAttribute("Saturn.Extensions.Serilog")>]
 [<assembly: AssemblyProductAttribute("Saturn.Extensions.Serilog")>]
-[<assembly: AssemblyVersionAttribute("0.1.0")>]
+[<assembly: AssemblyVersionAttribute("0.1.1")>]
 [<assembly: AssemblyMetadataAttribute("ReleaseDate","2022-04-28T00:00:00.0000000+04:00")>]
-[<assembly: AssemblyFileVersionAttribute("0.1.0")>]
-[<assembly: AssemblyInformationalVersionAttribute("0.1.0")>]
+[<assembly: AssemblyFileVersionAttribute("0.1.1")>]
+[<assembly: AssemblyInformationalVersionAttribute("0.1.1")>]
 [<assembly: AssemblyMetadataAttribute("ReleaseChannel","release")>]
-[<assembly: AssemblyMetadataAttribute("GitHash","4a347b9c9334e4c9809f1f5c31d587af8b9be7b5")>]
+[<assembly: AssemblyMetadataAttribute("GitHash","a2712b396169a8477871f9b2696998be53d20879")>]
 do ()
 
 module internal AssemblyVersionInformation =
     let [<Literal>] AssemblyTitle = "Saturn.Extensions.Serilog"
     let [<Literal>] AssemblyProduct = "Saturn.Extensions.Serilog"
-    let [<Literal>] AssemblyVersion = "0.1.0"
+    let [<Literal>] AssemblyVersion = "0.1.1"
     let [<Literal>] AssemblyMetadata_ReleaseDate = "2022-04-28T00:00:00.0000000+04:00"
-    let [<Literal>] AssemblyFileVersion = "0.1.0"
-    let [<Literal>] AssemblyInformationalVersion = "0.1.0"
+    let [<Literal>] AssemblyFileVersion = "0.1.1"
+    let [<Literal>] AssemblyInformationalVersion = "0.1.1"
     let [<Literal>] AssemblyMetadata_ReleaseChannel = "release"
-    let [<Literal>] AssemblyMetadata_GitHash = "4a347b9c9334e4c9809f1f5c31d587af8b9be7b5"
+    let [<Literal>] AssemblyMetadata_GitHash = "a2712b396169a8477871f9b2696998be53d20879"
