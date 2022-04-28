@@ -1,0 +1,5 @@
+FSharp.Core
+Giraffe.SerilogExtensions
+Saturn
+Serilog.AspNetCore
+Serilog.Enrichers.Thread

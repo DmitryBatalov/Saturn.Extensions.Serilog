@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateProgramFile>false</GenerateProgramFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="../../src/Saturn.Extensions.Serilog/Saturn.Extensions.Serilog.fsproj" />
+    </ItemGroup>
+        <ItemGroup>
+        <Compile Include="AssemblyInfo.fs" />
+        <Compile Include="Tests.fs" />
+        <Compile Include="Main.fs" />
+        <Content Include="paket.references" />
+    </ItemGroup>
+    <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
+
